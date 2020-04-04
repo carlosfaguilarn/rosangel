@@ -22,9 +22,9 @@ class ClienteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function agregar()
     {
-        //
+        return view('clientes.agregar');
     }
 
     /**

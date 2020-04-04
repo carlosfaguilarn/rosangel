@@ -13,16 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+
 
 Route::get('/laravel', function () {
     return view('welcome');
-}); 
+});
 
+Route::get('/', function () {
+    return redirect('/inicio');
+});
 Route::resource('/inicio', 'DashboardController');
-Route::resource('/clientes', 'ClienteController');
-Route::resource('/empleados', 'EmpleadoController');
-Route::resource('/pedidos', 'PedidoController');
-Route::resource('/inventarios', 'InventarioController');
+
+Route::get('/clientes', 'ClienteController@index');
+Route::get('/clientes/agregar', 'ClienteController@agregar');
+
+Route::get('/empleados', 'EmpleadoController@index');
+Route::get('/empleados/agregar', 'EmpleadoController@agregar');
+Route::get('/empleados/comisiones', 'EmpleadoController@comisiones');
+
+Route::get('/pedidos', 'PedidoController@index');
+Route::get('/inventario', 'InventarioController@index');
+Route::get('/inventario/agregar', 'InventarioController@agregar');

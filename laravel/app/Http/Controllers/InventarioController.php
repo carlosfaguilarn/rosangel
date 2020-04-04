@@ -13,7 +13,7 @@ class InventarioController extends Controller
      */
     public function index()
     {
-        //
+        return view('inventario.index');
     }
 
     /**
@@ -21,9 +21,9 @@ class InventarioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function agregar()
     {
-        //
+        return view('inventario.agregar');
     }
 
     /**

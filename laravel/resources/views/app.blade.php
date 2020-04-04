@@ -3,8 +3,11 @@
     <head>
     <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" type="image/png" href="{!! asset('img/tienda.jpg') !!}" />
         <title>Rosangel Store - @yield('title')</title>
         <link rel="stylesheet" href="{!! asset('css/adminlte.min.css') !!}">
+        <link rel="stylesheet" href="{!! asset('css/store.css') !!}">
+        <link rel="stylesheet" href="{!! asset('js/store.js') !!}">
         <!-- Tell the browser to be responsive to screen width -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{!! asset('plugins/fontawesome-free/css/all.min.css') !!}">
@@ -167,84 +170,73 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
                         with font-awesome or any other icon font library -->
-                                    <!-- OPCION 1 DEL MENÚ-->
-                    <li class="nav-item has-treeview menu-open">
-                        <a href="./" class="nav-link">
-                        <i class="nav-icon fas fa-chart-bar"></i>
-                        <p>
-                            Inicio
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
+                    <!-- OPCION 1 DEL MENÚ-->
+                    <li class="nav-item @if(request()->is('/inicio')) menu-open @endif">
+                        <a href="{{ url('/') }}" class="nav-link">
+                            <i class="nav-icon fas fa-chart-bar"></i>
+                            <p>
+                                Inicio 
+                            </p>
                         </a>                     
-                    </li> 
-                    <li class="nav-item has-treeview menu-open">
-                        <a href="./clientes" class="nav-link">
-                        <i class="nav-icon fas fa-users"></i>
-                        <p>
-                            Clientes
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="./clientes/index" class="nav-link">
-                            <i class="far fa-circle nav-icon" style="font-size: 10px;"></i>
-                            <p>Listado</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./clientes/agregar" class="nav-link">
-                            <i class="far fa-circle nav-icon" style="font-size: 10px;"></i>
-                            <p>Agregar cliente</p>
-                            </a>
-                        </li> 
-                        </ul>
-                    </li>
-
+                    </li>  
                     <!-- OPCION 2 DEL MENÚ-->
-                    <li class="nav-item has-treeview">
-                        <a href="./empleados" class="nav-link">
-                        <i class="nav-icon fas fa-user-tie"></i>
-                        <p>
-                            Empleados
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
+                    <li class="nav-item has-treeview @if(request()->is('clientes') || request()->is('clientes/agregar')) menu-open @endif">
+                        <a class="nav-link">
+                            <i class="nav-icon fas fa-users"></i>
+                            <p>
+                                Clientes
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ url('/clientes') }}" class="nav-link @if(request()->is('clientes')) link-active @endif">
+                                    <i class="fas fa-list-ol nav-icon" style="font-size: 10px;"></i>
+                                    <p>Listado</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ url('/clientes/agregar') }}" class="nav-link @if(request()->is('clientes/agregar')) link-active @endif">
+                                    <i class="fas fa-plus nav-icon" style="font-size: 10px;"></i>
+                                    <p>Agregar cliente</p>
+                                </a>
+                            </li> 
+                        </ul>
+                    </li> 
+                    <!-- OPCION 3 DEL MENÚ-->
+                    <li class="nav-item has-treeview @if(request()->is('empleados') || request()->is('empleados/agregar') || request()->is('empleados/comisiones')) menu-open @endif">
+                        <a class="nav-link">
+                            <i class="nav-icon fas fa-user-tie"></i>
+                            <p>
+                                Empleados
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
                         </a>
                         <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="./empleados/index" class="nav-link">
-                            <i class="far fa-circle nav-icon" style="font-size: 10px"></i>
+                            <a href="{{ url('empleados') }}" class="nav-link @if(request()->is('empleados')) link-active @endif">
+                            <i class="fas fa-list-ol nav-icon" style="font-size: 10px"></i>
                             <p>Listado</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./empleados/agregar" class="nav-link">
-                            <i class="far fa-circle nav-icon" style="font-size: 10px"></i>
+                            <a href="{{ url('empleados/agregar') }}" class="nav-link @if(request()->is('empleados/agregar')) link-active @endif">
+                            <i class="fas fa-plus nav-icon" style="font-size: 10px"></i>
                             <p>Agregar empleado</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./empleados/comisiones" class="nav-link">
-                            <i class="far fa-circle nav-icon" style="font-size: 10px"></i>
+                            <a href="{{ url('empleados/comisiones') }}" class="nav-link @if(request()->is('empleados/comisiones')) link-active @endif">
+                            <i class="fas fa-dollar-sign nav-icon" style="font-size: 10px"></i>
                             <p>Comisiones</p>
                             </a>
                         </li>
                         </ul>
                     </li>
-                    <!-- OPCION 3 DEL MENÚ-->
-                    <li class="nav-item">
-                        <a href="./pedidos" class="nav-link">
-                        <i class="fas fa-cart-plus"></i>
-                        <p>
-                            Pedidos
-                            <!--<span class="right badge badge-danger">New</span>-->
-                        </p>
-                        </a>
-                    </li> 
                     <!-- OPCION 4 DEL MENÚ-->
-                    <li class="nav-item has-treeview menu-open">
-                        <a href="./inventario" class="nav-link">
-                        <i class="fas fa-clipboard-list"></i>
+                    <li class="nav-item has-treeview @if(request()->is('inventario') || request()->is('inventario/agregar')) menu-open @endif">
+                        <a class="nav-link">
+                        <i class="nav-icon fas fa-clipboard-list"></i>
                         <p>
                             Inventario
                             <i class="right fas fa-angle-left"></i>
@@ -252,19 +244,29 @@
                         </a>
                         <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="./inventario/index" class="nav-link">
-                            <i class="far fa-circle nav-icon" style="font-size: 10px;"></i>
-                            <p>Listado</p>
+                            <a href="{{ url('inventario') }}" class="nav-link @if(request()->is('inventario')) link-active @endif">
+                                <i class="fas fa-list-ol nav-icon" style="font-size: 10px;"></i>
+                                <p>Listado</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./inventario/agregar" class="nav-link">
-                            <i class="far fa-circle nav-icon" style="font-size: 10px;"></i>
+                            <a href="{{ url('inventario/agregar') }}" class="nav-link @if(request()->is('inventario/agregar')) link-active @endif">
+                            <i class="fas fa-plus nav-icon" style="font-size: 10px;"></i>
                             <p>Agregar producto</p>
                             </a>
                         </li> 
                         </ul>
                     </li>
+                    
+                    <!-- OPCION 5 DEL MENÚ-->
+                    <li class="nav-item @if(request()->is('pedidos')) menu-open @endif">
+                        <a href="{{ url('pedidos') }}" class="nav-link">
+                            <i class="nav-icon fas fa-cart-plus"></i>
+                            <p>
+                                Pedidos 
+                            </p>
+                        </a> 
+                    </li> 
                 </nav>
                 <!-- /.sidebar-menu -->
                 </div>
@@ -318,21 +320,11 @@
         <script src="{!! asset('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') !!}"></script>
         <script src="{!! asset('plugins/summernote/summernote-bs4.min.js') !!}"></script>
         <script src="{!! asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') !!}"></script>
-        <script src="{!! asset('dist/js/adminlte.js') !!}"></script>
-        <script src="{!! asset('dist/js/pages/dashboard.js') !!}"></script>
-        <script src="{!! asset('dist/js/demo.js') !!}"></script>
-        <script>
-            $(function () { 
-                $("#example1").DataTable();
-                $('#example2').DataTable({
-                "paging": true,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false,
-                });
-            });
-        </script> 
+        <script src="{!! asset('js/adminlte.js') !!}"></script>
+        <script src="{!! asset('js/pages/dashboard.js') !!}"></script>
+        <script src="{!! asset('js/demo.js') !!}"></script>
+        <!-- Select2 -->
+        <script src="../../plugins/select2/js/select2.full.min.js"></script>
+        @yield('scripts')  
     </body>
 </html>

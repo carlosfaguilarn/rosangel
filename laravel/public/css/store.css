@@ -1,0 +1,9 @@
+.nav-item{
+    cursor: pointer;
+}
+.nav-treeview{
+    margin-left: 25px;
+}
+.link-active{
+    color: cornflowerblue !important;
+}

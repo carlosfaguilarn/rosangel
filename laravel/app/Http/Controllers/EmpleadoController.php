@@ -21,9 +21,19 @@ class EmpleadoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function agregar()
     {
-        //
+        return view('empleados.agregar');
+    }
+
+    /**
+     * Comisiones de los empleados
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function comisiones()
+    {
+        return view('empleados.comisiones');
     }
 
     /**

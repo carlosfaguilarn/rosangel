@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('app')
 @section('title', 'Administrador')
 @section('seccion', 'Clientes')
 @section('subseccion', 'Listado')
@@ -34,4 +34,20 @@
             </table>
         </div> 
     </div>
+@endsection
+
+@section('scripts') 
+    <script>
+        $(function () { 
+            $("#example1").DataTable();
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+            });
+        });
+    </script> 
 @endsection
