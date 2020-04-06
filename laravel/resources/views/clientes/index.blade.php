@@ -3,6 +3,11 @@
 @section('seccion', 'Clientes')
 @section('subseccion', 'Listado')
 @section('content')
+    @if(session()->has('message'))
+        <script>  
+            alertSuccess('¡El cliente se guardó correctamente!'); 
+        </script> 
+    @endif
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">Listado de todos los clientes</h3>
@@ -49,5 +54,5 @@
                 "autoWidth": false,
             });
         });
-    </script> 
+    </script>  
 @endsection

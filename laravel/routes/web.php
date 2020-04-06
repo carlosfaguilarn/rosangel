@@ -26,6 +26,7 @@ Route::resource('/inicio', 'DashboardController');
 
 Route::get('/clientes', 'ClienteController@index');
 Route::get('/clientes/agregar', 'ClienteController@agregar');
+Route::post('/clientes/save', 'ClienteController@store');
 
 Route::get('/empleados', 'EmpleadoController@index');
 Route::get('/empleados/agregar', 'EmpleadoController@agregar');
