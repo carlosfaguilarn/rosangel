@@ -6,7 +6,7 @@
 @section('content') 
     @if(session()->has('message'))
         <script>  
-            alertSuccess('¡El cliente se guardó correctamente!'); 
+            alertSuccess("{{session('message')}}"); 
         </script> 
     @endif
     <div class="card">

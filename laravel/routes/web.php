@@ -31,6 +31,7 @@ Route::post('/clientes/save', 'ClienteController@store');
 Route::get('/empleados', 'EmpleadoController@index');
 Route::get('/empleados/agregar', 'EmpleadoController@agregar');
 Route::get('/empleados/comisiones', 'EmpleadoController@comisiones');
+Route::post('/empleados/save', 'EmpleadoController@store');
 
 Route::get('/pedidos', 'PedidoController@index');
 Route::get('/inventario', 'InventarioController@index');
