@@ -2,7 +2,8 @@
 @section('title', 'Administrador')
 @section('seccion', 'Clientes')
 @section('subseccion', 'Listado')
-@section('content')
+
+@section('content') 
     @if(session()->has('message'))
         <script>  
             alertSuccess('¡El cliente se guardó correctamente!'); 
@@ -36,10 +37,10 @@
                         </tr>
                     @endforeach
                 </tbody> 
-            </table>
-        </div> 
-    </div>
-@endsection
+            </table> 
+        </div>  
+    </div> 
+@endsection 
 
 @section('scripts') 
     <script>

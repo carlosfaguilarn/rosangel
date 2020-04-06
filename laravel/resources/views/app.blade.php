@@ -20,6 +20,34 @@
         <link rel="stylesheet" href="{!! asset('plugins/summernote/summernote-bs4.css') !!}">
         <link rel="stylesheet" href="{!! asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css') !!}">
         <link rel="stylesheet" href="{!! asset('toastr/toastr.css') !!}"> 
+        <!-- Scripts -->
+        <script src="{!! asset('plugins/jquery/jquery.min.js') !!}"></script>
+        <script src="{!! asset('plugins/jquery-ui/jquery-ui.min.js') !!}"></script>
+        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+        <script> 
+            $.widget.bridge('uibutton', $.ui.button)
+        </script>
+        <script src="{!! asset('plugins/bootstrap/js/bootstrap.bundle.min.js') !!}"></script>
+        <script src="{!! asset('plugins/datatables/jquery.dataTables.js') !!}"></script>
+        <script src="{!! asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js') !!}"></script>
+        <script src="{!! asset('plugins/chart.js/Chart.min.js') !!}"></script>
+        <script src="{!! asset('plugins/sparklines/sparkline.js') !!}"></script>
+        <script src="{!! asset('plugins/jqvmap/jquery.vmap.min.js') !!}"></script>
+        <script src="{!! asset('plugins/jqvmap/maps/jquery.vmap.usa.js') !!}"></script>
+        <script src="{!! asset('plugins/jquery-knob/jquery.knob.min.js') !!}"></script>
+        <script src="{!! asset('plugins/moment/moment.min.js') !!}"></script>
+        <script src="{!! asset('plugins/daterangepicker/daterangepicker.js') !!}"></script>
+        <script src="{!! asset('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') !!}"></script>
+        <script src="{!! asset('plugins/summernote/summernote-bs4.min.js') !!}"></script>
+        <script src="{!! asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') !!}"></script>
+        <script src="{!! asset('js/adminlte.js') !!}"></script>
+        <script src="{!! asset('js/pages/dashboard.js') !!}"></script>
+        <script src="{!! asset('js/demo.js') !!}"></script>
+        <script src="{!! asset('js/store.js') !!}"></script>
+        <!-- Select2 -->
+        <script src="{!! asset('plugins/select2/js/select2.full.min.js') !!}"></script>
+        <script src="{!! asset('toastr/toastr.js') !!}"></script> 
+        @yield('scripts') 
     </head>
     <body class="hold-transition sidebar-mini layout-fixed">
         <div class="wrapper">
@@ -299,33 +327,6 @@
                     </div>
                 </div>
             </section>
-        </div> 
-        <script src="{!! asset('plugins/jquery/jquery.min.js') !!}"></script>
-        <script src="{!! asset('plugins/jquery-ui/jquery-ui.min.js') !!}"></script>
-        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-        <script> 
-            $.widget.bridge('uibutton', $.ui.button)
-        </script>
-        <script src="{!! asset('plugins/bootstrap/js/bootstrap.bundle.min.js') !!}"></script>
-        <script src="{!! asset('plugins/datatables/jquery.dataTables.js') !!}"></script>
-        <script src="{!! asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js') !!}"></script>
-        <script src="{!! asset('plugins/chart.js/Chart.min.js') !!}"></script>
-        <script src="{!! asset('plugins/sparklines/sparkline.js') !!}"></script>
-        <script src="{!! asset('plugins/jqvmap/jquery.vmap.min.js') !!}"></script>
-        <script src="{!! asset('plugins/jqvmap/maps/jquery.vmap.usa.js') !!}"></script>
-        <script src="{!! asset('plugins/jquery-knob/jquery.knob.min.js') !!}"></script>
-        <script src="{!! asset('plugins/moment/moment.min.js') !!}"></script>
-        <script src="{!! asset('plugins/daterangepicker/daterangepicker.js') !!}"></script>
-        <script src="{!! asset('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') !!}"></script>
-        <script src="{!! asset('plugins/summernote/summernote-bs4.min.js') !!}"></script>
-        <script src="{!! asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') !!}"></script>
-        <script src="{!! asset('js/adminlte.js') !!}"></script>
-        <script src="{!! asset('js/pages/dashboard.js') !!}"></script>
-        <script src="{!! asset('js/demo.js') !!}"></script>
-        <script src="{!! asset('js/store.js') !!}"></script>
-        <!-- Select2 -->
-        <script src="{!! asset('plugins/select2/js/select2.full.min.js') !!}"></script>
-        <script src="{!! asset('toastr/toastr.js') !!}"></script>
-        @yield('scripts')  
+        </div>  
     </body>
 </html>
