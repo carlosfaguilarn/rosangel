@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Example 1</title>
-    <link rel="stylesheet" href="style.css" media="all" />
-  </head>
-  <body>
+@extends('app')
+@section('title', 'Administrador')
+@section('seccion', 'Empleados')
+@section('subseccion', 'PDF')
+@section('content')
     <header class="clearfix">
       <div id="logo">
-        <img src="logo.png">
+        <img src="{!! asset('img/logo.png') !!}">
       </div>
       <h1>INVOICE 3-2-1</h1>
       <div id="company" class="clearfix">
@@ -88,5 +85,4 @@
     <footer>
       Invoice was created on a computer and is valid without the signature and seal.
     </footer>
-  </body>
-</html>
+  @endsection
