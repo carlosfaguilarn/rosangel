@@ -7,6 +7,7 @@ use App\Rol;
 use App\Venta;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class EmpleadoController extends Controller
 {
@@ -96,9 +97,21 @@ class EmpleadoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function pdf()
+    public function previewPDF()
     {
-        return view('empleados.pdf');
+        return view('empleados.previewPDF');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function printPDF()
+    {
+        $pdf = PDF::loadView('empleados.printPDF'); 
+        return $pdf->download('comision-list.pdf');
     }
 
     /**

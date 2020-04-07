@@ -19,8 +19,7 @@
         <link rel="stylesheet" href="{!! asset('plugins/daterangepicker/daterangepicker.css') !!}">
         <link rel="stylesheet" href="{!! asset('plugins/summernote/summernote-bs4.css') !!}">
         <link rel="stylesheet" href="{!! asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css') !!}">
-        <link rel="stylesheet" href="{!! asset('toastr/toastr.css') !!}"> 
-        <link rel="stylesheet" href="{!! asset('pdf.css') !!}"> 
+        <link rel="stylesheet" href="{!! asset('toastr/toastr.css') !!}">  
         <!-- Scripts -->
         <script src="{!! asset('plugins/jquery/jquery.min.js') !!}"></script>
         <script src="{!! asset('plugins/jquery-ui/jquery-ui.min.js') !!}"></script>

@@ -34,6 +34,11 @@
             </table> 
         </div>  
     </div> 
+    <div style="width: 100%; margin-top: 30px; text-align: center"> 
+        <a href="{{url('empleados/previewPDF')}}" class="btn btn-primary pull-right" style="margin-right: 5px;">
+            <i class="fas fa-file-pdf"></i>&nbsp;&nbsp; Exportar PDF
+        </a>
+    </div>
 @endsection 
 
 @section('scripts') 
