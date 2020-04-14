@@ -11,6 +11,17 @@ use Barryvdh\DomPDF\Facade as PDF;
 
 class EmpleadoController extends Controller
 {
+    public $query_comisiones = "
+        select empleados.id as 'empleado_id', empleados.nombre, empleados.apellidos, empleados.comision,
+            format(sum(ventas.importe), 2) as 'total_vendido', 
+            format(sum(ventas.ganancia), 2) as 'ganancias_generadas',
+            COUNT(*) as 'productos_vendidos',
+            format(sum(ventas.importe) * (empleados.comision/100), 2) as 'total_pagar'
+        from ventas
+            LEFT JOIN empleados on empleados.id = ventas.empleado_id
+        GROUP BY empleados.id
+    ";
+    
     /**
      * Display a listing of the resource.
      *
@@ -19,8 +30,8 @@ class EmpleadoController extends Controller
     public function index()
     {  
         $empleados = DB::table("empleados")
-            ->leftJoin('roles', 'roles.id', '=', 'empleados.rol_id')
-            ->select('empleados.*', 'roles.descripcion')
+            ->leftJoin('rols', 'rols.id', '=', 'empleados.rol_id')
+            ->select('empleados.*', 'rols.descripcion')
             ->get();
 
         return view('empleados.index', compact('empleados'));
@@ -33,7 +44,7 @@ class EmpleadoController extends Controller
      */
     public function agregar()
     {
-        $roles = DB::table('roles')->get();
+        $roles = Rol::all();
         return view('empleados.agregar', compact('roles'));
     }
 
@@ -44,17 +55,7 @@ class EmpleadoController extends Controller
      */
     public function comisiones()
     {
-        $comisiones = DB::select("
-            select empleados.id, empleados.nombre, empleados.apellidos, empleados.comision,
-                format(sum(ventas.importe), 2) as 'total_vendido', 
-                format(sum(ventas.ganancia), 2) as 'ganancias_generadas',
-                COUNT(*) as 'productos_vendidos',
-                format(sum(ventas.importe) * (empleados.comision/100), 2) as 'total_pagar'
-            from ventas
-                LEFT JOIN empleados on empleados.id = ventas.empleado_id
-            GROUP BY empleados.id
-        ");
-
+        $comisiones = DB::select($this->query_comisiones);
         return view('empleados.comisiones', compact('comisiones'));
     }
 
@@ -99,7 +100,10 @@ class EmpleadoController extends Controller
      */
     public function previewPDF()
     {
-        return view('empleados.previewPDF');
+        $comisiones = DB::select($this->query_comisiones);
+        return redirect()
+            ->action('EmpleadoController@printPDF');
+        //return view('empleados.previewPDF', compact('comisiones'));
     }
 
     /**
@@ -110,7 +114,8 @@ class EmpleadoController extends Controller
      */
     public function printPDF()
     {
-        $pdf = PDF::loadView('empleados.printPDF'); 
+        $comisiones = DB::select($this->query_comisiones);
+        $pdf = PDF::loadView('empleados.printPDF', compact('comisiones')); 
         return $pdf->download('comision-list.pdf');
     }
 

@@ -28,5 +28,14 @@ class EmpleadosSeeder extends Seeder
             'comision' => '10',
             'rol_id' => 2
         ]); 
+
+        DB::table('empleados')->insert([
+            'nombre' => 'Angel', 
+            'apellidos' => 'Cebreros', 
+            'direccion' => 'Batamote 1323, Los angeles',
+            'telefono' => '6682323232', 
+            'comision' => '30',
+            'rol_id' => 3
+        ]); 
     }
 }

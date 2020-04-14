@@ -14,9 +14,8 @@ class ClienteController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $clientes = Cliente::all();
-        $roles = Rol::all();
-        return view('clientes.index', compact('clientes', 'roles'));
+        $clientes = Cliente::all(); 
+        return view('clientes.index', compact('clientes'));
     }
 
     /**

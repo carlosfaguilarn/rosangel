@@ -5,23 +5,32 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Comisiones generadas por empleados</h3>
+            <h3 class="card-title float-right"> 
+                <a href="{{url('empleados/export-excel')}}" class="btn btn-light" style="margin-right: 5px; border: 1px solid grey">
+                    <i class="far fa-file-excel" style="color: #A35E8B"></i>&nbsp;&nbsp; Exportar Excel
+                </a>
+                <a href="{{url('empleados/previewPDF')}}" class="btn btn-light" style="margin-right: 5px; border: 1px solid grey">
+                    <i class="far fa-file-pdf" style="color: #A35E8B"></i>&nbsp;&nbsp; Exportar PDF
+                </a>
+            </h3>
         </div> 
         <div class="card-body">
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
-                <tr> 
-                    <th>Empleado</th>   
-                    <th>Productos Vendidos</th> 
-                    <th>Total Vendido</th>    
-                    <th>Ganancias Generadas</th>    
-                    <th>Porcentaje Comision</th>    
-                    <th>Total a Pagar</th>    
-                </tr>
+                    <tr> 
+                        <th>ID</th>   
+                        <th>Empleado</th>   
+                        <th>Productos Vendidos</th> 
+                        <th>Total Vendido</th>    
+                        <th>Ganancias Generadas</th>    
+                        <th>Porcentaje Comision</th>    
+                        <th>Total a Pagar</th>    
+                    </tr>
                 </thead>
                 <tbody>   
                     @foreach($comisiones as $comision)
                         <tr> 
+                            <td class="left">{{$comision->empleado_id}}</td>
                             <td class="left">{{$comision->nombre}} {{$comision->apellidos}}</td>
                             <td class="center">{{$comision->productos_vendidos}}</td>
                             <td class="right">${{$comision->total_vendido}}</td>

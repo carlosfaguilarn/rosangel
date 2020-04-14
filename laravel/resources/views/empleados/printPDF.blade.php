@@ -1,5 +1,6 @@
 <!-- Main content --> 
-
+<link rel="stylesheet" href="{{public_path('css/pdf.css') }}">  
+        
 
 <div class="invoice p-3 mb-3">
 <!-- title row -->
@@ -10,7 +11,6 @@
         Rosangel Store, Inc.
         <small class="float-right">Fecha: 2/10/2014</small>
     </h4>
-    <hr />
     </div> 
     <!-- /.col -->
 </div>
@@ -27,43 +27,28 @@
     <div class="col-12 table-responsive">
     <table class="table table-striped">
         <thead>
-        <tr>
-        <th>Qty</th>
-        <th>Product</th>
-        <th>Serial #</th>
-        <th>Description</th>
-        <th>Subtotal</th>
-        </tr>
+            <tr> 
+                <th>ID</th>   
+                <th>Empleado</th>   
+                <th>Productos Vendidos</th> 
+                <th>Total Vendido</th>    
+                <th>Ganancias Generadas</th>    
+                <th>Porcentaje Comision</th>    
+                <th>Total a Pagar</th>    
+            </tr>
         </thead>
-        <tbody>
-        <tr>
-        <td>1</td>
-        <td>Call of Duty</td>
-        <td>455-981-221</td>
-        <td>El snort testosterone trophy driving gloves handsome</td>
-        <td>$64.50</td>
-        </tr>
-        <tr>
-        <td>1</td>
-        <td>Need for Speed IV</td>
-        <td>247-925-726</td>
-        <td>Wes Anderson umami biodiesel</td>
-        <td>$50.00</td>
-        </tr>
-        <tr>
-        <td>1</td>
-        <td>Monsters DVD</td>
-        <td>735-845-642</td>
-        <td>Terry Richardson helvetica tousled street art master</td>
-        <td>$10.70</td>
-        </tr>
-        <tr>
-        <td>1</td>
-        <td>Grown Ups Blue Ray</td>
-        <td>422-568-642</td>
-        <td>Tousled lomo letterpress</td>
-        <td>$25.99</td>
-        </tr>
+        <tbody>   
+            @foreach($comisiones as $comision)
+                <tr> 
+                    <td class="left">{{$comision->empleado_id}}</td>
+                    <td class="left">{{$comision->nombre}} {{$comision->apellidos}}</td>
+                    <td class="center">{{$comision->productos_vendidos}}</td>
+                    <td class="right">${{$comision->total_vendido}}</td>
+                    <td class="right">${{$comision->ganancias_generadas}}</td>
+                    <td class="center">{{$comision->comision}}%</td>
+                    <td class="right">${{$comision->total_pagar}}</td>
+                </tr>
+            @endforeach
         </tbody>
     </table>
     </div>
@@ -77,8 +62,8 @@
         
     </div>
     <!-- /.col -->
-    <div class="col-6">
-        <p class="lead">Amount Due 2/22/2014</p> 
+    <div class="col-6 float-right">
+        <p class="lead">Resumen de pagos</p> 
         <div class="table-responsive">
             <table class="table">
             <tr>

@@ -1,3 +1,8 @@
 {
-    "workbench.editor.tabSizing": "shrink"
+    "workbench.editor.tabSizing": "shrink",
+    "typescript.locale": "es",
+    "files.autoSave": "afterDelay",
+    "editor.tabCompletion": "on",
+    "debug.console.fontSize": 18,
+    "editor.fontSize": 18
 }

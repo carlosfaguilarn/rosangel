@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class DashboardController extends Controller
 {
@@ -13,7 +14,18 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard.index');
+        $pedidos = '13';
+        //$users = DB::table('users')->select('name', 'email as user_email')->get();
+        $ganancias = DB::table('ventas')->sum('ganancia');
+        $clientes  = DB::table('clientes')->count('*');
+        $productos = DB::table('ventas')->count('*');
+        $data = [
+            'pedidos' => $pedidos,
+            'ganancias' => $ganancias,
+            'clientes' => $clientes,
+            'productos' => $productos
+        ];
+        return view('dashboard.index', compact('data'));
     }
 
     /**
