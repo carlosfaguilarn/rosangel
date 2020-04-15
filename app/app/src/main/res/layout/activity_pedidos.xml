@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cont_tool"
+        android:layout_above="@id/btnAgregar"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
+
+            <!-- ESTACIÓN -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Campo"
+                android:textSize="18sp"
+                android:paddingStart="5dp"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    android:id="@+id/textEstacion"
+                    style="@style/fields_form_agregarpedido"
+                    />
+            </FrameLayout>
+
+            <!-- PRODUCTO -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Campo"
+                android:textSize="18sp"
+                android:paddingStart="10dp"
+                android:layout_marginTop="15dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    android:id="@+id/textProducto"
+                    style="@style/fields_form_agregarpedido"
+                    />
+            </FrameLayout>
+
+            <!-- FECHA DE ENVIO -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Campo"
+                android:textSize="18sp"
+                android:paddingStart="10dp"
+                android:layout_marginTop="15dp"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    android:id="@+id/textFecha"
+                    style="@style/fields_form_agregarpedido"
+                    />
+            </FrameLayout>
+
+            <!-- VOLUMEN -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Campo"
+                android:textSize="18sp"
+                android:paddingStart="10dp"
+                android:layout_marginTop="15dp"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/textVolumen"
+                    style="@style/fields_form_agregarpedido"
+                    />
+            </FrameLayout>
+
+            <!-- PRODUCTO -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Campo"
+                android:textSize="18sp"
+                android:paddingStart="10dp"
+                android:layout_marginTop="15dp"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    android:id="@+id/textTurno"
+                    style="@style/fields_form_agregarpedido"
+                    />
+            </FrameLayout>
+
+            <!-- AUTOABASTO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Campo"
+                    android:textSize="18sp"
+                    android:paddingStart="10dp"
+                    android:layout_gravity="center"
+                    />
+
+                <CheckBox
+                    android:id="@+id/checkAutoAbasto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Campo"
+                android:textSize="18sp"
+                android:paddingStart="10dp"
+                android:layout_marginTop="15dp"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/textObservaciones"
+                    style="@style/fields_form_agregarpedido_large"
+                    />
+            </FrameLayout>
+
+            <!-- COMPAÑÍA TRANSPORTISTA -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Campo"
+                android:textSize="18sp"
+                android:paddingStart="10dp"
+                android:layout_marginTop="15dp"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    android:id="@+id/textTransportista"
+                    style="@style/fields_form_agregarpedido"
+                    />
+            </FrameLayout>
+
+            <!-- VEHÍCULO -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Campo"
+                android:textSize="18sp"
+                android:paddingStart="10dp"
+                android:layout_marginTop="15dp"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    android:id="@+id/textVehiculo"
+                    style="@style/fields_form_agregarpedido"
+                    />
+            </FrameLayout>
+
+            <!-- AUTOTANQUE 1 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Campo"
+                android:textSize="18sp"
+                android:paddingStart="10dp"
+                android:layout_marginTop="15dp"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    android:id="@+id/textAutotanque1"
+                    style="@style/fields_form_agregarpedido"
+                    />
+            </FrameLayout>
+
+
+            <!-- AUTOTANQUE 2 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Campo"
+                android:textSize="18sp"
+                android:paddingStart="10dp"
+                android:layout_marginTop="15dp"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    android:id="@+id/textAutotanque2"
+                    style="@style/fields_form_agregarpedido"
+                    />
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/btnAgregar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bk_boton_guardar"
+        android:text="@string/confirmar_pedido"
+        android:textColor="@color/colorWhite"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

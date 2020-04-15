@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Rosangel</string>
+    <string name="confirmar_pedido">Confirmar Pedido</string>
+    <string name="crear_pedido">Crear  Pedido</string>
+</resources>
