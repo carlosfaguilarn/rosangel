@@ -5,10 +5,11 @@
 @section('content')
 <div class="container-fluid">
     <!-- Small boxes (Stat box) -->
+    	  
     <div class="row">
       <div class="col-lg-3 col-6">
         <!-- small box -->
-        <div class="small-box bg-info">
+        <div class="small-box bg-danger">
           <div class="inner">
             <h3>{{$data['pedidos']}}</h3>
             <p>Nuevos Pedidos</p>
@@ -20,6 +21,19 @@
         </div>
       </div>
       <!-- ./col -->
+      <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-info">
+          <div class="inner">
+            <h3>${{$data['ventas']}}</h3>
+            <p>Ventas</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-stats-bars"></i>
+          </div>
+          <a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
       <div class="col-lg-3 col-6">
         <!-- small box -->
         <div class="small-box bg-success">
@@ -44,15 +58,15 @@
           <div class="icon">
             <i class="ion ion-person-add"></i>
           </div>
-          <a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+          <a href="{{url('clientes')}}" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
         </div>
       </div>
-      <!-- ./col -->
+      <!-- ./col 
       <div class="col-lg-3 col-6">
-        <!-- small box -->
+        <!-- small box  
         <div class="small-box bg-danger">
           <div class="inner">
-            <h3>{{$data['productos']}}</h3>
+            <h3></h3>
             <p>Productos vendidos</p>
           </div>
           <div class="icon">
@@ -60,8 +74,8 @@
           </div>
           <a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
         </div>
-      </div>
-      <!-- ./col -->
+      </div> 
+       ./col -->
     </div>
     <!-- /.row -->
 

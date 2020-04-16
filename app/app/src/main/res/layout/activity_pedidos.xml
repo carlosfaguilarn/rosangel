@@ -26,7 +26,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Campo"
+                android:text="@string/producto"
                 android:textSize="18sp"
                 android:paddingStart="5dp"
                 />
@@ -36,28 +36,36 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 >
-                <TextView
-                    android:id="@+id/textEstacion"
+                <EditText
+                    android:id="@+id/editProducto"
                     style="@style/fields_form_agregarpedido"
                     />
             </FrameLayout>
 
             <!-- PRODUCTO -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                />
+
+            <!-- FECHA DE ENVIO -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Campo"
+                android:text="@string/cliente"
                 android:textSize="18sp"
                 android:paddingStart="10dp"
                 android:layout_marginTop="15dp"
                 />
+
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 >
-                <TextView
-                    android:id="@+id/textProducto"
+                <EditText
+                    android:id="@+id/editCliente"
                     style="@style/fields_form_agregarpedido"
                     />
             </FrameLayout>
@@ -66,7 +74,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Campo"
+                android:text="@string/empleado"
                 android:textSize="18sp"
                 android:paddingStart="10dp"
                 android:layout_marginTop="15dp"
@@ -77,8 +85,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 >
-                <TextView
-                    android:id="@+id/textFecha"
+                <EditText
+                    android:id="@+id/editEmpleado"
                     style="@style/fields_form_agregarpedido"
                     />
             </FrameLayout>
@@ -87,7 +95,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Campo"
+                android:text="@string/tel_fono"
                 android:textSize="18sp"
                 android:paddingStart="10dp"
                 android:layout_marginTop="15dp"
@@ -97,8 +105,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 >
-                <TextView
-                    android:id="@+id/textVolumen"
+                <EditText
+                    android:id="@+id/editTelefono"
                     style="@style/fields_form_agregarpedido"
                     />
             </FrameLayout>
@@ -107,7 +115,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Campo"
+                android:text="@string/direccion"
                 android:textSize="18sp"
                 android:paddingStart="10dp"
                 android:layout_marginTop="15dp"
@@ -118,13 +126,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 >
-                <TextView
-                    android:id="@+id/textTurno"
+                <EditText
+                    android:id="@+id/editDireccion"
                     style="@style/fields_form_agregarpedido"
                     />
             </FrameLayout>
 
-            <!-- AUTOABASTO -->
+            <!-- AUTOABASTO
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -147,11 +155,11 @@
                     android:layout_gravity="center"
                     />
             </LinearLayout>
-
+            -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Campo"
+                android:text="@string/observaciones"
                 android:textSize="18sp"
                 android:paddingStart="10dp"
                 android:layout_marginTop="15dp"
@@ -161,94 +169,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 >
-                <TextView
-                    android:id="@+id/textObservaciones"
+                <EditText
+                    android:id="@+id/editObservaciones"
                     style="@style/fields_form_agregarpedido_large"
-                    />
-            </FrameLayout>
-
-            <!-- COMPAÑÍA TRANSPORTISTA -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Campo"
-                android:textSize="18sp"
-                android:paddingStart="10dp"
-                android:layout_marginTop="15dp"
-                />
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                >
-                <TextView
-                    android:id="@+id/textTransportista"
-                    style="@style/fields_form_agregarpedido"
-                    />
-            </FrameLayout>
-
-            <!-- VEHÍCULO -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Campo"
-                android:textSize="18sp"
-                android:paddingStart="10dp"
-                android:layout_marginTop="15dp"
-                />
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                >
-                <TextView
-                    android:id="@+id/textVehiculo"
-                    style="@style/fields_form_agregarpedido"
-                    />
-            </FrameLayout>
-
-            <!-- AUTOTANQUE 1 -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Campo"
-                android:textSize="18sp"
-                android:paddingStart="10dp"
-                android:layout_marginTop="15dp"
-                />
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                >
-                <TextView
-                    android:id="@+id/textAutotanque1"
-                    style="@style/fields_form_agregarpedido"
-                    />
-            </FrameLayout>
-
-
-            <!-- AUTOTANQUE 2 -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Campo"
-                android:textSize="18sp"
-                android:paddingStart="10dp"
-                android:layout_marginTop="15dp"
-                />
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                >
-                <TextView
-                    android:id="@+id/textAutotanque2"
-                    style="@style/fields_form_agregarpedido"
                     />
             </FrameLayout>
         </LinearLayout>

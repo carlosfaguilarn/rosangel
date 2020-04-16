@@ -1,4 +1,4 @@
-package com.rosangel.ui;
+package com.rosangel.app;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,10 +6,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.Toolbar;
-
-import com.rosangel.R;
 
 import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
@@ -17,13 +14,14 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Utils {
+    public static final int STATUS_CORRECT = 200;
     /**
      * URL general del servidor
      * */
     //public static final String URL_SERVER = "http://10.10.1.108:9047/bin";
     //public static final String URL_SERVER = "http://carvel.redpacifico.com/bin";
     //public static String URL_SERVER = "http://carvel.redpacifico.com:9047/bin";
-    public static String URL_SERVER;
+    public static String URL_SERVER = "http://10.10.1.120:8000/api";
     public static String PORT_SERVER = "9047";
     public static String DIR_SERVER = "bin";
 

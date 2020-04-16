@@ -14,14 +14,15 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $pedidos = '13';
-        //$users = DB::table('users')->select('name', 'email as user_email')->get();
+        $pedidos   = DB::table('pedidos')->count('*');
         $ganancias = DB::table('ventas')->sum('ganancia');
+        $ventas    = DB::table('ventas')->sum('importe');
         $clientes  = DB::table('clientes')->count('*');
         $productos = DB::table('ventas')->count('*');
         $data = [
             'pedidos' => $pedidos,
             'ganancias' => $ganancias,
+            'ventas' => $ventas,
             'clientes' => $clientes,
             'productos' => $productos
         ];

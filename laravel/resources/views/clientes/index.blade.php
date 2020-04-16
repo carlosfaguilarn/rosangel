@@ -33,7 +33,13 @@
                             <td>{{$cliente->direccion}}</td>
                             <td>{{$cliente->telefono}}</td>
                             <td>{{$cliente->revision}}</td>
-                            <td>{{$cliente->facebook}}</td>
+                            <td>
+                                @if($cliente->facebook != "") 
+                                    {{$cliente->facebook}}
+                                @else 
+                                    - 
+                                @endif
+                            </td>
                         </tr>
                     @endforeach
                 </tbody> 

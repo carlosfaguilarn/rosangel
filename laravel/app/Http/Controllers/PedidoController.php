@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Pedido;
 
 class PedidoController extends Controller
 {
@@ -13,7 +14,8 @@ class PedidoController extends Controller
      */
     public function index()
     {
-        return view('pedidos.index');
+        $pedidos = Pedido::all();
+        return view('pedidos.index', compact('pedidos'));
     }
 
     /**
@@ -34,7 +36,19 @@ class PedidoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pedido = new Pedido();
+        $pedido->producto = $request->input('producto');
+        $pedido->cliente = $request->input('cliente');
+        $pedido->empleado = $request->input('empleado');
+        $pedido->direccion = $request->input('direccion');
+        $pedido->telefono = $request->input('telefono');
+        $pedido->observaciones = $request->input('observaciones');
+        $pedido->save();
+
+        return response()->json([
+            'status' => 200,
+            'message' => 'Pedido creado correctamente'
+        ]);
     }
 
     /**
