@@ -6,6 +6,7 @@
     <color name="colorAccent">#0033A0</color>
 
     <color name="colorAppBack">#F7F7F7</color>
+    <color name="colorAppBackDark">#f2f2f0</color>
     <color name="colorDarkGrey">#A9A9A9</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlue">#3097ff</color>

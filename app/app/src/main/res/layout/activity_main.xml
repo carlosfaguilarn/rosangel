@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorAppBackDark"
     tools:context=".app.UI.MainActivity">
 
     <include layout="@layout/toolbar" />
@@ -12,6 +13,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/cont_tool"
         android:orientation="vertical"
         >
         <TextView
@@ -34,142 +36,106 @@
             android:layout_marginTop="5dp"
             />
 
-        <ImageView
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/avatar_mujer_2"
-            />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="40dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
         >
 
         <LinearLayout
+            android:id="@+id/btnCrear"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="100dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/bk_boton_main_menu"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="15dp"
             >
-
-            <LinearLayout
-                android:id="@+id/btnPedidos"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginStart="5dp"
-                android:background="@drawable/bk_boton_main_menu"
-                android:orientation="vertical"
-                android:gravity="center"
-                >
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:background="@drawable/bk_boton_main_menu"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/ic_cart"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="@string/pedidos"
-                    android:textSize="23sp"
-                    android:textColor="@color/colorWhite"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="10dp"
-                    />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/btnCrear"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginStart="5dp"
-                android:background="@drawable/bk_boton_main_menu"
-                android:orientation="vertical"
-                android:gravity="center"
-                >
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:background="@drawable/bk_boton_main_menu"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/ic_add"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="@string/crear_pedido"
-                    android:textSize="23sp"
-                    android:textColor="@color/colorWhite"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="10dp"
-                    />
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            >
-            <LinearLayout
-                android:id="@+id/btnProductos"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginStart="5dp"
-                android:background="@drawable/bk_boton_main_menu"
-                android:orientation="vertical"
-                android:gravity="center"
-                >
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:background="@drawable/bk_boton_main_menu"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/ic_list"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="@string/productos"
-                    android:textSize="23sp"
-                    android:textColor="@color/colorWhite"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="10dp"
-                    />
-            </LinearLayout>
 
             <ImageView
-                android:id="@+id/btnSalir"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:padding="50dp"
-                android:visibility="invisible"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_add"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/crear_pedido"
+                android:textSize="35sp"
+                android:textColor="@color/colorTextDark"
+                android:layout_margin="15dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btnPedidos"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/bk_boton_main_menu"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            >
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                android:src="@drawable/supermarket"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/pedidos"
+                android:textSize="35sp"
+                android:textColor="@color/colorTextDark"
+                android:layout_margin="15dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btnProductos"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/bk_boton_main_menu"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            >
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                android:src="@drawable/checklist"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/productos"
+                android:textSize="35sp"
+                android:textColor="@color/colorTextDark"
+                android:layout_margin="15dp"
                 />
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</RelativeLayout>

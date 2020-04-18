@@ -22,3 +22,5 @@ Route::post('/pedidos/crear', 'PedidoController@store');
 Route::get('/pedidos', 'PedidoController@pedidos');
 Route::get('/productos', 'InventarioController@productos');
 Route::get('/clientes', 'ClienteController@clientes');
+
+Route::post('/login', 'LoginController@login');
