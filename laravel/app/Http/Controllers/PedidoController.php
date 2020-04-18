@@ -17,6 +17,18 @@ class PedidoController extends Controller
         $pedidos = Pedido::all();
         return view('pedidos.index', compact('pedidos'));
     }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pedidos()
+    {
+        return response()->json([
+            "status" => 200,
+            "data" => Pedido::all()
+        ]);
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -43,6 +55,7 @@ class PedidoController extends Controller
         $pedido->direccion = $request->input('direccion');
         $pedido->telefono = $request->input('telefono');
         $pedido->observaciones = $request->input('observaciones');
+        $pedido->estatus = 'PENDIENTE';
         $pedido->save();
 
         return response()->json([

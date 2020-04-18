@@ -17,4 +17,12 @@
     <string name="pedido_correcto">Pedido Correcto</string>
     <string name="pedido_incorrecto">Pedido Incorrecto</string>
     <string name="empleado">Empleado</string>
+    <string name="inicio">Inicio</string>
+    <string name="fin">Fin</string>
+    <string name="no_pedidos">No tienes pedidos</string>
+    <string name="consultar_pedidos">Consultar Pedidos</string>
+    <string name="no_productos">No hay productos disponibles</string>
+    <string name="filtro_busca">Descripcion, marca, id</string>
+    <string name="seleccione_producto">Seleecciona producto</string>
+    <string name="seleccione_cliente">Seleccione Cliente</string>
 </resources>

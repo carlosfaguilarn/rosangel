@@ -14,8 +14,19 @@ class ClienteController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $clientes = Cliente::all(); 
+        $clientes = Cliente::all();
         return view('clientes.index', compact('clientes'));
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function clientes(){
+        return response()->json([
+            "status" => 200,
+            "data" => Cliente::all()
+        ]);
     }
 
     /**

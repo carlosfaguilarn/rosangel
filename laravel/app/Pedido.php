@@ -12,6 +12,6 @@ class Pedido extends Model
      * @var array
      */
     protected $fillable = [
-        'producto', 'cliente', 'direccion', 'telefono', 'observaciones'
-    ]; 
+        'producto', 'cliente', 'direccion', 'telefono', 'observaciones', 'status'
+    ];
 }

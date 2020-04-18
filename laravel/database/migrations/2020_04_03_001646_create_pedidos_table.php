@@ -20,7 +20,8 @@ class CreatePedidosTable extends Migration
             $table->string("empleado");
             $table->string("direccion");
             $table->string("telefono");
-            $table->string("observaciones"); 
+            $table->string("observaciones");
+            $table->string("estatus");
             $table->timestamps();
         });
     }

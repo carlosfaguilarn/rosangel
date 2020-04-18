@@ -1,5 +1,7 @@
 package com.rosangel.app.Modelos;
 
+import java.util.Date;
+
 public class Pedido {
     private int id;
     private String producto;
@@ -8,6 +10,8 @@ public class Pedido {
     private String direccion;
     private String telefono;
     private String observaciones;
+    private Date fecha;
+    private String estatus;
 
     public Pedido(){}
 
@@ -65,5 +69,20 @@ public class Pedido {
 
     public void setObservaciones(String observaciones) {
         this.observaciones = observaciones;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getEstatus() {
+        return estatus;
+    }
+
+    public void setEstatus(String estatus) {
+        this.estatus = estatus;
     }
 }

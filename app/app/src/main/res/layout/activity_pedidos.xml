@@ -36,10 +36,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 >
-                <EditText
+                <Button
                     android:id="@+id/editProducto"
                     style="@style/fields_form_agregarpedido"
-                    />
+                    android:textAllCaps="false"/>
             </FrameLayout>
 
             <!-- PRODUCTO -->
@@ -64,9 +64,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 >
-                <EditText
+                <Button
                     android:id="@+id/editCliente"
                     style="@style/fields_form_agregarpedido"
+                    android:textAllCaps="false"
                     />
             </FrameLayout>
 

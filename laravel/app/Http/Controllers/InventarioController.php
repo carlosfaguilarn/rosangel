@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Producto;
 
 class InventarioController extends Controller
 {
@@ -13,7 +14,20 @@ class InventarioController extends Controller
      */
     public function index()
     {
-        return view('inventario.index');
+        $productos = Producto::all();
+        return view('inventario.index', compact('productos'));
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function productos()
+    {
+        return response()->json([
+            "status" => 200,
+            "data" => Producto::all()
+        ]);
     }
 
     /**

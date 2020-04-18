@@ -11,16 +11,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.rosangel.R;
-import com.rosangel.app.Modelos.Pedido;
-import com.rosangel.app.Utils;
+import com.rosangel.app.Modelos.Producto;
 
 import java.util.ArrayList;
 
-public class PedidoAdapter extends ArrayAdapter {
+public class ProductoAdapter extends ArrayAdapter {
     private Activity context;
-    private ArrayList<Pedido> datos;
+    private ArrayList<Producto> datos;
 
-    public PedidoAdapter(Activity context, ArrayList<Pedido> datos) {
+    public ProductoAdapter(Activity context, ArrayList<Producto> datos) {
         super(context, R.layout.activity_productos, datos);
         this.context = context;
         this.datos = datos;
@@ -32,17 +31,17 @@ public class PedidoAdapter extends ArrayAdapter {
         LayoutInflater inflater = context.getLayoutInflater();
         View item = inflater.inflate(R.layout.item_producto, null);
 
-        TextView text_producto = item.findViewById(R.id.txtProducto);
-        text_producto.setText(datos.get(position).getProducto());
+        TextView text_producto = item.findViewById(R.id.textDescripcion);
+        text_producto.setText(datos.get(position).getDescripcion());
 
-        TextView text_cliente = item.findViewById(R.id.txtCliente);
-        text_cliente.setText(String.valueOf(datos.get(position).getCliente()));
+        TextView text_id = item.findViewById(R.id.textID);
+        text_id.setText(String.valueOf(datos.get(position).getId()));
 
-        TextView text_fecha = item.findViewById(R.id.txtFecha);
-        text_fecha.setText(Utils.dateToString(datos.get(position).getFecha(), "dd/MM/yyyy"));
+        TextView text_marca = item.findViewById(R.id.textMarca);
+        text_marca.setText(datos.get(position).getMarca());
 
-        TextView text_status = item.findViewById(R.id.txtEstatus);
-        text_status.setText(datos.get(position).getEstatus());
+        TextView text_exist = item.findViewById(R.id.textExist);
+        text_exist.setText(String.valueOf(datos.get(position).getExistencia()));
 
         return item;
     }
