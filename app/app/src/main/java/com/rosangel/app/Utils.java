@@ -2,11 +2,13 @@ package com.rosangel.app;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.Toolbar;
+import androidx.preference.PreferenceManager;
 
 import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
@@ -22,6 +24,7 @@ public class Utils {
     //public static final String URL_SERVER = "http://carvel.redpacifico.com/bin";
     //public static String URL_SERVER = "http://carvel.redpacifico.com:9047/bin";
     public static String URL_SERVER = "http://10.10.1.120:8000/api";
+    public static String IMG_SERVER = "http://10.10.1.120:8000/img/";
     public static String PORT_SERVER = "9047";
     public static String DIR_SERVER = "bin";
 
@@ -90,5 +93,17 @@ public class Utils {
         calendar.setTime(fecha);
         calendar.add(Calendar.DAY_OF_YEAR, dias);
         return calendar.getTime();
+    }
+
+    public static String getPreferences(Activity activity, String preference){
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(activity);
+        return preferences.getString(preference, "");
+    }
+
+    public static void setPreferences(Activity activity, String preference, String value){
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(activity);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(preference, value);
+        editor.apply();
     }
 }

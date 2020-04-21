@@ -25,4 +25,11 @@
     <string name="filtro_busca">Descripcion, marca, id</string>
     <string name="seleccione_producto">Seleecciona producto</string>
     <string name="seleccione_cliente">Seleccione Cliente</string>
+    <string name="usuario">Usuario</string>
+    <string name="password">Contraseña:</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="error_password">Usuario o contraseña incorrecta</string>
+    <string name="error_servidor">Error con el servidor, revisa tu conexión a internet</string>
+    <string name="iniciando">Ingresando...</string>
+    <string name="user_logged">Nombre Usuario Loggeado</string>
 </resources>

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\User;
 
 class UserSeeder extends Seeder
 {
@@ -11,7 +12,17 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert(['name' => 'carlos', 'email' => 'carlos@gmail.com', 'password' => '123']);
-        DB::table('users')->insert(['name' => 'maria', 'email' => 'maria@gmail.com', 'password' => '321']);
+        User::create([
+            'name' => 'Carlos Francisco Aguilar',
+            'email' => 'carlos',
+            'password' => '123',
+            'photo' => 'carlos.png'
+        ]);
+        User::create([
+            'name' => 'María Cebreros Miranda',
+            'email' => 'maria',
+            'password' => '321',
+            'photo' => 'maria.png'
+        ]);
     }
 }
