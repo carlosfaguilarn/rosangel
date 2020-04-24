@@ -5,65 +5,65 @@
 @section('content')
 <div class="container-fluid">
     <!-- Small boxes (Stat box) -->
-    	  
+
     <div class="row">
       <div class="col-lg-3 col-6">
         <!-- small box -->
-        <div class="small-box bg-danger">
+        <div class="small-box bg-blanca">
           <div class="inner">
             <h3>{{$data['pedidos']}}</h3>
             <p>Nuevos Pedidos</p>
           </div>
           <div class="icon">
-            <i class="ion ion-bag"></i>
+            <i class="ion ion-bag color-danger"></i>
           </div>
-          <a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+          <a href="#" class="small-box-footer bg-ft-danger">Más información <i class="fas fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
       <div class="col-lg-3 col-6">
         <!-- small box -->
-        <div class="small-box bg-info">
+        <div class="small-box bg-blanca">
           <div class="inner">
             <h3>${{$data['ventas']}}</h3>
             <p>Ventas</p>
           </div>
           <div class="icon">
-            <i class="ion ion-stats-bars"></i>
+            <i class="ion ion-stats-bars color-success"></i>
           </div>
-          <a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+          <a href="#" class="small-box-footer bg-ft-success">Más información <i class="fas fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <div class="col-lg-3 col-6">
         <!-- small box -->
-        <div class="small-box bg-success">
+        <div class="small-box bg-blanca">
           <div class="inner">
             <h3>${{$data['ganancias']}}</h3>
             <p>Ganancias</p>
           </div>
           <div class="icon">
-            <i class="ion ion-stats-bars"></i>
+            <i class="ion ion-stats-bars color-danger"></i>
           </div>
-          <a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+          <a href="#" class="small-box-footer bg-ft-warning">Más información <i class="fas fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
       <div class="col-lg-3 col-6">
         <!-- small box -->
-        <div class="small-box bg-warning">
+        <div class="small-box bg-blanca">
           <div class="inner">
             <h3>{{$data['clientes']}}</h3>
             <p>Clientes</p>
           </div>
           <div class="icon">
-            <i class="ion ion-person-add"></i>
+            <i class="ion ion-person-add color-info"></i>
           </div>
-          <a href="{{url('clientes')}}" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+          <a href="{{url('clientes')}}" class="small-box-footer bg-ft-info">Más información <i class="fas fa-arrow-circle-right"></i></a>
         </div>
       </div>
-      <!-- ./col 
+      <!-- ./col
       <div class="col-lg-3 col-6">
-        <!-- small box  
+        <!-- small box
         <div class="small-box bg-danger">
           <div class="inner">
             <h3></h3>
@@ -74,7 +74,7 @@
           </div>
           <a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
         </div>
-      </div> 
+      </div>
        ./col -->
     </div>
     <!-- /.row -->
@@ -106,17 +106,17 @@
                 <!-- Morris chart - Sales -->
                 <div class="chart tab-pane active" id="revenue-chart"
                      style="position: relative; height: 300px;">
-                    <canvas id="revenue-chart-canvas" height="300" style="height: 300px;"></canvas>                         
+                    <canvas id="revenue-chart-canvas" height="300" style="height: 300px;"></canvas>
                  </div>
                 <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;">
-                  <canvas id="sales-chart-canvas" height="300" style="height: 300px;"></canvas>                         
-                </div>  
+                  <canvas id="sales-chart-canvas" height="300" style="height: 300px;"></canvas>
+                </div>
               </div>
             </div><!-- /.card-body -->
           </div>
           <!-- /.card -->
 
-           
+
         </section>
         <!-- /.Left col -->
         <!-- right col (We are only adding the ID to make the widgets sortable)-->
@@ -142,20 +142,20 @@
               </div>
               <!-- /.card-tools -->
             </div>
-            
+
             <!-- /.card-body-->
             <div class="card-footer bg-transparent">
               <div class="row">
                 <div class="col-4 text-center">
-                  <div id="sparkline-1"></div> 
+                  <div id="sparkline-1"></div>
                 </div>
                 <!-- ./col -->
                 <div class="col-4 text-center">
-                  <div id="sparkline-2"></div> 
+                  <div id="sparkline-2"></div>
                 </div>
                 <!-- ./col -->
                 <div class="col-4 text-center">
-                  <div id="sparkline-3"></div> 
+                  <div id="sparkline-3"></div>
                 </div>
                 <!-- ./col -->
               </div>

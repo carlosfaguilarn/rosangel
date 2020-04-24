@@ -16,3 +16,19 @@
 .center{
     text-align: center !important;
 }
+
+.bg-blanca{
+    background-color: rgb(255, 255, 255, 1);
+}
+
+.bg-ft-default{ background-color: #868686 !important; }
+
+.bg-ft-danger{ background-color: #dc3545 !important;}
+.bg-ft-success{ background-color: #28A745 !important;}
+.bg-ft-info{ background-color: #17a2b8 !important;}
+.bg-ft-warning{ background-color: #ffc107 !important;}
+
+.color-danger{ color: #dc3545 !important;}
+.color-success{ color: #28A745 !important;}
+.color-info{ color: #17a2b8 !important;}
+.color-warning{ color: #ffc107 !important;}
