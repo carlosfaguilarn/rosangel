@@ -3,39 +3,35 @@
   display: table;
   clear: both;
 }
-
-.pdf-a {
-  color: #5D6975;
-  text-decoration: underline;
-}
  
 .pdf-body {
     position: relative;
-    width: auto;  
-    height: 29.7cm; 
+    width: auto;
+    height: 29.7cm;
     margin: 10px 25px;
-    padding: 20px; 
+    padding: 20px;
     color: #001028;
-    background: #FFFFFF; 
-    font-family: Arial, sans-serif; 
-    font-size: 12px; 
+    background: #FFFFFF;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
     font-family: Arial;
-} 
+}
 
 header {
   padding: 10px 0;
   margin-bottom: 30px;
 }
+
 .logotipo{
   display: inline-flex;
 }
 .logo {
   width: 30px;
   height: 20px;
-  text-align: left; 
-} 
+  text-align: left;
+}
 
-.pdf-title { 
+.pdf-title {
   color: #5D6975;
   font-size: 1.4em;
   line-height: 1.4em;
@@ -62,7 +58,7 @@ header {
 
 #project div,
 #company div {
-  white-space: nowrap;        
+  white-space: nowrap;
 }
 
 .pdf-table {
@@ -85,7 +81,7 @@ header {
   padding: 5px 20px;
   color: #5D6975;
   border-bottom: 1px solid #C1CED9;
-  white-space: nowrap;        
+  white-space: nowrap;
   font-weight: normal;
 }
 
@@ -94,7 +90,7 @@ header {
   text-align: left;
 }
 
-.pdf-table td { 
+.pdf-table td {
   text-align: right;
 }
 

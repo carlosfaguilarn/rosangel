@@ -12,18 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".MainMenu"
+            android:label="@string/title_activity_main_menu"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".app.UI.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".app.UI.Productos" />
         <activity android:name=".app.UI.ConsultarPedidos" />
         <activity android:name=".app.UI.CrearPedido" />
-        <activity android:name=".app.UI.MainActivity">
-
-        </activity>
+        <activity android:name=".app.UI.MainActivity" />
     </application>
 
 </manifest>

@@ -8,13 +8,55 @@
     android:background="@color/colorAppBackDark"
     tools:context=".app.UI.MainActivity">
 
-    <include layout="@layout/toolbar" />
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:id="@+id/cont_tool"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+                <ImageView
+                    android:id="@+id/imgProfile"
+                    android:src="@drawable/ic_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/txtUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre Usuario"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/roboto_bold"
+                    />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/cont_tool"
         android:orientation="vertical"
+        android:visibility="gone"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -33,16 +75,17 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:gravity="center"
+
             >
 
             <ImageView
-                android:id="@+id/imgProfile"
+                android:id="@+id/imgProfile1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/error" />
 
             <TextView
-                android:id="@+id/txtUsername"
+                android:id="@+id/txtUsername1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"

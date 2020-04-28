@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.rosangel.MainMenu;
 import com.rosangel.R;
 import com.rosangel.app.Utils;
 
@@ -112,7 +113,7 @@ public class LoginActivity extends AppCompatActivity {
                     String photo = jsonUser.getString("photo");
                     Utils.setPreferences(LoginActivity.this, "username", username);
                     Utils.setPreferences(LoginActivity.this, "photo", photo);
-                    startActivity(new Intent(activity, MainActivity.class));
+                    startActivity(new Intent(activity, MainMenu.class));
                     finish();
                 }else{
                     HttpMessage = jsonResponse.getString("message");
