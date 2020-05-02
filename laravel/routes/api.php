@@ -24,3 +24,4 @@ Route::get('/productos', 'InventarioController@productos');
 Route::get('/clientes', 'ClienteController@clientes');
 
 Route::post('/login', 'LoginController@login');
+Route::get('/dashboard', "DashboardController@indexJson");

@@ -50,7 +50,7 @@ class LoginController extends Controller{
         $request->token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMC4xMC4xLjEyMDo4MDAwXC9hcGlcL2xvZ2luIiwiaWF0IjoxNTg3NDE3NDk5LCJleHAiOjE1ODc0MjEwOTksIm5iZiI6MTU4NzQxNzQ5OSwianRpIjoiS3lIS05WTVdnakFEZE1SbSIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.pD6hsK5xUHMORh8VSRQ50yY-xgHWFffvQIMqzDqsQYQ";
 
         return response()->json([
-            'status' => 'ok',
+            'status' => 'ok', 
             'token' => $jwt_token,
             'user' => auth()->user()
         ]);

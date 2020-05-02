@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         imgProfile = findViewById(R.id.imgProfile);
         txtUsername = findViewById(R.id.txtUsername);
-        txtUsername.setText(Utils.getPreferences(MainActivity.this, "username"));
 
         request = Volley.newRequestQueue(getApplicationContext());
         cargarImagenPerfil();
@@ -42,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(getString(R.string.app_name));
-
 
         findViewById(R.id.btnCrear).setOnClickListener(new View.OnClickListener() {
             @Override

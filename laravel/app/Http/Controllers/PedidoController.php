@@ -56,12 +56,20 @@ class PedidoController extends Controller
         $pedido->telefono = $request->input('telefono');
         $pedido->observaciones = $request->input('observaciones');
         $pedido->estatus = 'PENDIENTE';
-        $pedido->save();
 
-        return response()->json([
-            'status' => 200,
-            'message' => 'Pedido creado correctamente'
-        ]);
+        if($pedido->save()){
+            return response()->json([
+                'status' => 200,
+                'message' => 'Pedido creado correctamente'
+            ]);
+        }else{
+            return response()->json([
+                'status' => 400,
+                'message' => 'El pedido no se creó'
+            ]);
+        }
+
+
     }
 
     /**

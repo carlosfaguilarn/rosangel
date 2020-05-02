@@ -202,7 +202,7 @@ public class CrearPedido extends AppCompatActivity {
             ImageView img_status = alert.findViewById(R.id.img_status);
 
             if(resultTask){
-                img_status.setImageResource(R.drawable.correcto);
+                img_status.setImageResource(R.drawable.correct);
                 txt_estatus.setText(detalleError);
             }else{
                 img_status.setImageResource(R.drawable.error);

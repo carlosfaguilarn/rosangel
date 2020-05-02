@@ -5,13 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-    <include layout="@layout/toolbar" />
 
     <ScrollView
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/cont_tool"
         android:layout_above="@id/btnAgregar"
         >
 
@@ -88,6 +86,7 @@
                 >
                 <EditText
                     android:id="@+id/editEmpleado"
+                    android:enabled="false"
                     style="@style/fields_form_agregarpedido"
                     />
             </FrameLayout>

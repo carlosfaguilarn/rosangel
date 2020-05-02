@@ -58,7 +58,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public class IniciarSesion extends AsyncTask<Void, String, Boolean> {
-        public int resultTask = 0;
         ImageView img_status;
         ProgressBar progress_status;
         TextView text_status;
@@ -110,18 +109,20 @@ public class LoginActivity extends AppCompatActivity {
                     alert.cancel();
                     JSONObject jsonUser = jsonResponse.getJSONObject("user");
                     String username = jsonUser.getString("name");
+                    String user = jsonUser.getString("email");
                     String photo = jsonUser.getString("photo");
                     Utils.setPreferences(LoginActivity.this, "username", username);
+                    Utils.setPreferences(LoginActivity.this, "user", user);
                     Utils.setPreferences(LoginActivity.this, "photo", photo);
                     startActivity(new Intent(activity, MainMenu.class));
                     finish();
                 }else{
-                    HttpMessage = jsonResponse.getString("message");
+                    HttpMessage = getString(R.string.error_password);
                 }
             } catch (Exception e){
                 Log.d("rps", "Error:" + e.getMessage());
                 e.printStackTrace();
-                resultTask = 2;
+                HttpMessage = getString(R.string.error_servidor);
             } finally {
 
             }

@@ -22,4 +22,9 @@
     <color name="colorGreyLight">#B6B3B3</color>
     <color name="colorDashboardItem">#E7EAEE</color>
     <color name="colorBackConsultar">#E5E5E5</color>
+
+    <color name="colorDanger">#dc3545</color>
+    <color name="colorSuccess">#28A745</color>
+    <color name="colorInfo">#17a2b8</color>
+    <color name="colorWarning">#ffc107</color>
 </resources>

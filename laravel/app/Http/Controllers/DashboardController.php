@@ -26,8 +26,44 @@ class DashboardController extends Controller
             'clientes' => $clientes,
             'productos' => $productos
         ];
-        return view('dashboard.index', compact('data'));
+
+        if($type != null){
+            return view('dashboard.index', compact('data'));
+        }else{
+            return response()->json([
+                "status" => "ok",
+                "data" => $data
+            ]);
+        }
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function indexJson()
+    {
+        $pedidos   = DB::table('pedidos')->count('*');
+        $ganancias = DB::table('ventas')->sum('ganancia');
+        $ventas    = DB::table('ventas')->sum('importe');
+        $clientes  = DB::table('clientes')->count('*');
+        $productos = DB::table('ventas')->count('*');
+        $data = [
+            'pedidos_totales' => 23, //$pedidos,
+            'pedidos_pendientes' => 16, //$pedidos,
+            'ganancias' => $ganancias,
+            'ventas' => $ventas,
+            'clientes' => 734, //$clientes,
+            'productos' => $productos
+        ];
+
+        return response()->json([
+            "status" => "ok",
+            "data" => $data
+        ]);
+    }
+
 
     /**
      * Show the form for creating a new resource.
