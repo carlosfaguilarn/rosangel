@@ -55,7 +55,7 @@ public class CrearPedido extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pedidos);
+        setContentView(R.layout.activity_crear_pedido);
         buttonProducto = findViewById(R.id.editProducto);
         buttonCliente = findViewById(R.id.editCliente);
 

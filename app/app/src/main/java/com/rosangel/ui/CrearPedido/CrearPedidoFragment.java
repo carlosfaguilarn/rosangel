@@ -35,7 +35,7 @@ public class CrearPedidoFragment extends Fragment {
     private Button buttonCliente;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        final View root = inflater.inflate(R.layout.activity_pedidos, container, false);
+        final View root = inflater.inflate(R.layout.activity_crear_pedido, container, false);
         buttonProducto = root.findViewById(R.id.editProducto);
         buttonCliente = root.findViewById(R.id.editCliente);
 

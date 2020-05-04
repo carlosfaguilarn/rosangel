@@ -122,7 +122,8 @@ public class LoginActivity extends AppCompatActivity {
             } catch (Exception e){
                 Log.d("rps", "Error:" + e.getMessage());
                 e.printStackTrace();
-                HttpMessage = getString(R.string.error_servidor);
+                //HttpMessage = getString(R.string.error_servidor);
+                HttpMessage = e.getMessage();
             } finally {
 
             }

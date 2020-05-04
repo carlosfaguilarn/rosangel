@@ -87,7 +87,6 @@ public class HttpGetPedidos extends AsyncTask<Void, String, Void> {
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
         adapterPedidos.notifyDataSetChanged();
-
         view.findViewById(R.id.progress_pedidos).setVisibility(View.INVISIBLE);
         if (ITEMS_COUNTS == 0) {
             view.findViewById(R.id.cont_no_pedidos).setVisibility(View.VISIBLE);

@@ -15,6 +15,18 @@ public class Pedido {
 
     public Pedido(){}
 
+    public Pedido(int id, String producto, String cliente, String empleado, String direccion, String telefono, String observaciones, Date fecha, String estatus) {
+        this.id = id;
+        this.producto = producto;
+        this.cliente = cliente;
+        this.empleado = empleado;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.observaciones = observaciones;
+        this.fecha = fecha;
+        this.estatus = estatus;
+    }
+
     public int getId() {
         return id;
     }

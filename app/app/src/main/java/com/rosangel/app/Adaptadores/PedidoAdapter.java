@@ -21,7 +21,7 @@ public class PedidoAdapter extends ArrayAdapter {
     private ArrayList<Pedido> datos;
 
     public PedidoAdapter(Activity context, ArrayList<Pedido> datos) {
-        super(context, R.layout.activity_productos, datos);
+        super(context, R.layout.activity_consultar_pedidos, datos);
         this.context = context;
         this.datos = datos;
     }
@@ -30,7 +30,7 @@ public class PedidoAdapter extends ArrayAdapter {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
-        View item = inflater.inflate(R.layout.item_producto, null);
+        View item = inflater.inflate(R.layout.item_pedido, null);
 
         TextView text_producto = item.findViewById(R.id.txtProducto);
         text_producto.setText(datos.get(position).getProducto());

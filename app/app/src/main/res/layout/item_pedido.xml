@@ -47,7 +47,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="3"
+                android:layout_weight="2"
                 android:orientation="horizontal"
                 android:gravity="center"
                 >
@@ -72,6 +72,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cliente:"
+                    android:textSize="13sp"
                     android:fontFamily="@font/roboto_bold"
                     android:textColor="@color/colorTextDark"
                     style="@style/textItemPedido"
@@ -82,6 +83,8 @@
                     android:text="María Elizabeth"
                     android:fontFamily="@font/roboto_bold"
                     android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textSize="13sp"
                     style="@style/textItemPedido"
                     android:textColor="@color/colorTextMedium"
                     android:layout_height="wrap_content"/>
@@ -97,6 +100,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Fecha:"
+                    android:textSize="13sp"
                     style="@style/textItemPedido"
                     android:fontFamily="@font/roboto_bold"
                     android:textColor="@color/colorTextDark"
@@ -108,6 +112,8 @@
                     android:fontFamily="@font/roboto_bold"
                     style="@style/textItemPedido"
                     android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textSize="13sp"
                     android:textColor="@color/colorTextMedium"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -122,6 +128,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Estatus:"
+                    android:textSize="13sp"
                     style="@style/textItemPedido"
                     android:fontFamily="@font/roboto_bold"
                     android:textColor="@color/colorTextDark"
@@ -129,9 +136,11 @@
                 <TextView
                     android:id="@+id/txtEstatus"
                     android:layout_width="wrap_content"
-                    android:text="Licuadora"
+                    android:text="PENDIENTE"
                     android:fontFamily="@font/roboto_bold"
                     android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textSize="13sp"
                     style="@style/textItemPedido"
                     android:textColor="@color/colorTextMedium"
                     android:layout_height="wrap_content"/>
