@@ -41,34 +41,14 @@ public class HistorialPedidosFragment extends Fragment {
         SwipeMenuCreator creator = new SwipeMenuCreator() {
             @Override
             public void create(SwipeMenu menu) {
-                // create "open" item
-                SwipeMenuItem openItem = new SwipeMenuItem(getContext());
-                // set item background
-                openItem.setBackground(R.color.colorBackConsultar);
-                // set item width
-                openItem.setWidth(150);
-                // set item title
-                //openItem.setTitle("Open");
-                openItem.setIcon(R.drawable.ic_delete);
-                // set item title fontsize
-                openItem.setTitleSize(38);
-                // set item title font color
-                openItem.setTitleColor(Color.WHITE);
-                // add to menu
-                menu.addMenuItem(openItem);
-
-                /* create "delete" item
-                SwipeMenuItem deleteItem = new SwipeMenuItem(
-                        getContext());
-                // set item background
-                deleteItem.setBackground(new ColorDrawable(Color.rgb(0xF9,
-                        0x3F, 0x25)));
-                // set item width
-                deleteItem.setWidth(170);
-                // set a icon
-                deleteItem.setIcon(R.drawable.ic_close);
-                // add to menu
-                menu.addMenuItem(deleteItem);*/
+                SwipeMenuItem deleteItem = new SwipeMenuItem(getContext());
+                deleteItem.setBackground(R.color.colorBackConsultar);
+                deleteItem.setWidth(100);
+                deleteItem.setIcon(R.drawable.ic_delete);
+                deleteItem.setTitle(getString(R.string.eliminar));
+                deleteItem.setTitleSize(13);
+                deleteItem.setTitleColor(Color.parseColor("#dc3545"));
+                menu.addMenuItem(deleteItem);
             }
         };
 
@@ -80,14 +60,10 @@ public class HistorialPedidosFragment extends Fragment {
             public boolean onMenuItemClick(int position, SwipeMenu menu, int index) {
                 switch (index) {
                     case 0:
-                        Utils.showMessageShort(getContext(), "opcion uno de: " + index);
-                        break;
-                    case 1:
-                        Utils.showMessageShort(getContext(), "opcion dos de: " + index);
                         break;
                 }
                 // false : close the menu; true : not close the menu
-                return false;
+                return true;
             }
         });
 

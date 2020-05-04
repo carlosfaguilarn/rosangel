@@ -41,6 +41,18 @@ class PedidoController extends Controller
     }
 
     /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function delete($id)
+    {
+        $pedido = Pedido::find($id);
+        $pedido->estatus = "ELIMINADO";
+        $pedido->save();
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request

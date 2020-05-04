@@ -56,6 +56,8 @@
     <string name="menu_pedidos">Crear Pedido</string>
     <string name="menu_historial_pedidos">Historial de pedidos</string>
     <string name="vendedor">Vendedor</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="texto">Texto de prueba</string>
 
     <array name="pantallas">
         <item>Rosangel</item>
